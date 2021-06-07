@@ -127,32 +127,15 @@ padding: 0px 10px; }
         <input id="amount" type="number" value="0" min="0">
         <h3 class="price">SubTotal:</h3>
         <h3><div class="currency">$</div><div id="subTotalText">0.00</div></h3>
-        <button class="pay-button">Buy Chillis</button>
+        <button class="pay-button" onclick="confirm()">Checkout</button>
         
         <span id="message"></span>
         
       </div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
       <script src="./scripts/items.js"></script>
-      <script>
-        window.onload = function() {  
-    var url = window.location.href;
-    var id = url.substring(url.lastIndexOf('=') + 1);
-    console.log(id)
-// view single product
-var FOUND = itemData.find(function(item, index) {
-        if(item.id == id){
-            return true;
-        }
-            else "not found"
-    });
-    
-    console.log(FOUND);
-    $('.product span').text(FOUND.name);
-    $('.price span').text(FOUND.price);
-    $('.productImg').attr("src",FOUND.pic);
+      <script src="./scripts/test.js">
 
-        }
         </script> 
 
 </body>
