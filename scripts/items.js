@@ -17,6 +17,8 @@ const itemData = [
 ];
 
 
+$('.card').css("visibility", "hidden");
+
 //display item in admin page
 var table = document.getElementById("myTable");
 
@@ -73,18 +75,23 @@ function addProduct() {
     cell3.innerHTML = `<button type="button" onclick="deleteRow(this)">&times;</button>`;
   }
 
+
 // Seach by name
 function search() {
 var search = document.getElementById("search").value
 
 console.log(search);
 var FOUND = itemData.find(function(item, index) {
-	if(item.name == search)
-		return true;
+	if(item.name == search){
+        $('.card').css("visibility", "visible");
+        return true;
+    }
         else "not found"
 });
 
-
 console.log(FOUND);
+$('.card h4').text(FOUND.name);
+$('.card p').text(FOUND.price);
+$('.card .pic').attr("src",FOUND.pic);
 }
   
