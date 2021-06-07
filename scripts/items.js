@@ -2,19 +2,19 @@ const itemData = [
     {
         id: 0,
         name: 'computer',
-        pic: 'JavaScript',
+        pic: 'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4Av4g?ver=be22&w=498&h=408&q=90&m=6&b=%23FFF0F0F0&f=jpg&o=f&p=0&aim=true',
         price: '5000',
     },
     {
         id: 1,
         name: 'iphone 11',
-        pic: 'JavaScript',
+        pic: 'https://img.router-switch.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-11-pro-max_2.jpg',
         price: '3500',
     },
     {
         id: 2,
         name: 'microsoft mouse',
-        pic: 'JavaScript',
+        pic: 'https://media.extra.com/s/aurora/100043152_800/Microsoft-Surface-Mobile-Mouse-SC-Bluetooth-Platinum?locale=en-GB,en-*,*&$Listing-Product-2x$',
         price: '350',
     },
 ];
