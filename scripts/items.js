@@ -80,9 +80,10 @@ function addProduct() {
 
 
 // Seach by name
+var search ;
 function search() {
-var search = document.getElementById("search").value
 
+search = document.getElementById("search").value
 console.log(search);
 var FOUND = itemData.find(function(item, index) {
 	if(item.name == search){
@@ -98,6 +99,8 @@ $('.card p').text(FOUND.price);
 $('.card .pic').attr("src",FOUND.pic);
 $('.card .link').attr("href",`singleItem.html?id=${FOUND.id}`);
 
-
 }
+
+
+
   
