@@ -28,18 +28,29 @@ for (var i=0;i<itemData.length;i++){
     cell3[i] = row.insertCell(2);
     cell1.innerHTML = itemData[i].name;
     cell2.innerHTML = itemData[i].price;
-    cell3[i].innerHTML = "X";
+    cell3[i].innerHTML = `<button type="button" onclick="deleteRow(this)">&times;</button>`;
 
     
    }
-   
-   for (var i=0;i<cell3.length;i++){
-    cell3[i].onclick = function () {
-        var parent = this.parentNode.parentNode; //get the row node
-    table.deleteRow(0);
-    }
 
-   }
+
+//delete row 
+   function upTo(el, tagName) {
+    tagName = tagName.toLowerCase();
+  
+    while (el && el.parentNode) {
+      el = el.parentNode;
+      if (el.tagName && el.tagName.toLowerCase() == tagName) {
+        return el;
+      }
+    }
+    return null;
+  }    
+  
+  function deleteRow(el) {
+    var row = upTo(el, 'tr')
+    if (row) row.parentNode.removeChild(row);
+  }
    
 
 
@@ -59,13 +70,9 @@ function addProduct() {
     var cell3 = row.insertCell(2);
     cell1.innerHTML = name;
     cell2.innerHTML = price;
-    cell3.innerHTML = "X";
+    cell3.innerHTML = `<button type="button" onclick="deleteRow(this)">&times;</button>`;
   }
 
-// delete product
-
-
-   
 
  
   
