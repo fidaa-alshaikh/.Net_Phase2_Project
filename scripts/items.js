@@ -28,6 +28,21 @@ for (var i=0;i<itemData.length;i++){
     cell2.innerHTML = itemData[i].price;		
    }
 
+
+// add product
+function addProduct() {
+
+    var name = document.getElementById("productName").value;
+    //var pic = document.getElementById("productPic").value;
+    var price = document.getElementById("productPrice").value;
+    
+    var row = table.insertRow(0);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    cell1.innerHTML = name;
+    cell2.innerHTML = price;
+  }
+
    
 
  

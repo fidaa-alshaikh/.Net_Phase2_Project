@@ -26,7 +26,45 @@
         </table>
       </div>
 
-     <button><a href="./addItem.html">add new item</a></button>
+     <!-- add new pro -->
+    <div>
+        <h2>Add new product</h2>
+
+        
+        <div class="container">
+          <form action="#">
+          <div class="row">
+            <div class="col-25">
+              <label for="productName">Product Name</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="productName" name="productName" placeholder="Your product name..">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="productPic">product Pic</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="productPic" name="productPic" placeholder="product Pic URL..">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="productPrice">product Price</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="productPrice" name="productPrice" placeholder="product Price...">
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- <input  type="submit" value="Submit"> -->
+            <button onclick="addProduct()">add</button>
+          </div>
+          </form>
+        </div>
+
     </div>
 
     <script src="./scripts/items.js"></script>
