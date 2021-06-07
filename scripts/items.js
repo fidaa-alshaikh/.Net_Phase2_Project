@@ -1,16 +1,16 @@
 const itemData = [
     {
-        name: 'Computer',
+        name: 'computer',
         pic: 'JavaScript',
         price: '5000',
     },
     {
-        name: 'iPhone 11',
+        name: 'iphone 11',
         pic: 'JavaScript',
         price: '3500',
     },
     {
-        name: 'Microsoft Mouse',
+        name: 'microsoft mouse',
         pic: 'JavaScript',
         price: '350',
     },
@@ -73,6 +73,18 @@ function addProduct() {
     cell3.innerHTML = `<button type="button" onclick="deleteRow(this)">&times;</button>`;
   }
 
+// Seach by name
+function search() {
+var search = document.getElementById("search").value
 
- 
+console.log(search);
+var FOUND = itemData.find(function(item, index) {
+	if(item.name == search)
+		return true;
+        else "not found"
+});
+
+
+console.log(FOUND);
+}
   
