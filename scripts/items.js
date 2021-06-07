@@ -1,15 +1,18 @@
 const itemData = [
     {
+        id: 0,
         name: 'computer',
         pic: 'JavaScript',
         price: '5000',
     },
     {
+        id: 1,
         name: 'iphone 11',
         pic: 'JavaScript',
         price: '3500',
     },
     {
+        id: 2,
         name: 'microsoft mouse',
         pic: 'JavaScript',
         price: '350',
@@ -93,5 +96,8 @@ console.log(FOUND);
 $('.card h4').text(FOUND.name);
 $('.card p').text(FOUND.price);
 $('.card .pic').attr("src",FOUND.pic);
+$('.card .link').attr("href",`singleItem.html?id=${FOUND.id}`);
+
+
 }
   
